@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+
+  <head>
+    <title>BMR Calculator</title> <!--title-->
+    <!--link style--><link rel="stylesheet" href="BMIStyle.css">
+  </head>
+
+<!--BMR Calculator-->
+  <body>
+    <h1 title = "BMR">
+      BMR Calculator
+    </h1>
+    <div class="container">
+      <form name="BMRCalculator">
+        Age: <input type="number" name="Age"><br>
+        Gender: 
+        <select name="gender">
+          <option value="1">male</option>
+          <option value="2">female</option>
+        </select><br>
+        Height: <input type="number" name="height" placeholder="cm"><br>
+        Weight: <input type="number" name="weight" placeholder="kg"><br>
+
+        <input type="button" value="Calculate" onClick="calcBmr()"><br>
+
+        <bmr style="font-size: 40px; padding: 20px; margin-top: 50px;">
+          You need:
+        </bmr>
+        <input type="number" name="BMRRes"style="font-size: 40px;"> calories / daily
+
+
+      </form>
+    </div>
+
+    <!--Return home-->
+    <li><a href="home.html"> Return Home </a></li>
+
+    <!--Intro Video-->
+    <h2 style="padding:20px;">What is BMR?</h2>
+    <iframe width="1000" height="600" style="padding: 20px;" src="https://www.youtube.com/embed/c81nojCsoiI">
+    </iframe>
+
+
+    <!--JavaScript Calculation-->
+    <script>
+      function calcBmr()
+      {
+        var age;
+        var gender;
+        var height;
+        var weight;
+        var res;
+        age=Number(document.BMRCalculator.Age.value);
+        height=Number(document.BMRCalculator.height.value);
+        weight=Number(document.BMRCalculator.weight.value);
+        gender=Number(document.BMRCalculator.gender.value);
+        if(gender == 1){
+          res=10*weight+6.25*height-5*age+5;
+          document.BMRCalculator.BMRRes.value = res;
+        }
+        else if(gender == 2){
+          res=10*weight+6.25*height-5*age-161;
+          document.BMRCalculator.BMRRes.value = res;
+        }
+
+
+      }
+    </script>
+
+  </body>
+
+
+
+
+
+</html>

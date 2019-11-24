@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+
+
+  <head>
+    <title>Macros Calculator</title> <!--title-->
+    <!--link style--><link rel="stylesheet" href="BMIStyle.css">
+  </head>
+
+<!--Macros Calculator-->
+  <body>
+    <h1 title = "Macros">
+      Macros Calculator
+    </h1>
+
+    <div class="container">
+      <form name="MacrosCalculator">
+        Age: <input type="number" name="Age"><br>
+        Gender: <br>
+                <input type="radio" name="gender" value="male"> Male <br>
+                <input type="radio" name="gender" value="female"> Female <br>
+        Weight: <input type="number" name="weight" placeholder="kg"><br>
+        Your goal: <select name="goal">
+          <option value="1">Lose fat</option>
+          <option value="2">Gain muscle</option>
+          <option value="3">Maintain Weight</option>
+        </select>
+        <div style="font-size:30px; margin-bottom: 30px; margin-top: 30px;">
+        Recommended Macros:
+        </div>
+        Carbohydrate: <input type="number" name="carbohydrate">g/day<br>
+        Protein: <input type="number" name="protein">g/day<br>
+        Fat: <input type="number" name="fat">g/day<br>
+
+        <input type="button" value="Calculate" onClick="calcMacros()"><br>
+
+      </form>
+    </div>
+
+    <!--Return home-->
+    <li><a href="home.html"> Return Home </a></li>
+
+    <!--Intro Video-->
+    <h2 style="padding:20px;">What are Macros?</h2>
+    <iframe width="1000" height="600" style="padding: 20px;" src="https://www.youtube.com/embed/SkJauRBDHqY">
+    </iframe>
+
+
+    <!--JavaScript Calculation-->
+    <script>
+      function calcMacros()
+      {
+        var weight;
+        var goal;
+        var carbohydrate;
+        var protein;
+        var fat;
+
+
+        weight=Number(document.MacrosCalculator.weight.value);
+        goal=Number(document.MacrosCalculator.goal.value);
+
+        if(goal == 1){ //losing fat
+          carbohydrate = weight*3.5;
+          protein = weight*1.75;
+          fat = weight*0.4;
+          document.MacrosCalculator.carbohydrate.value = carbohydrate;
+          document.MacrosCalculator.protein.value = protein;
+          document.MacrosCalculator.fat.value = fat;
+        }
+
+        else if(goal == 2){ //Gain muscle
+          carbohydrate = weight*6.5;
+          protein = weight*1.75;
+          fat = weight*0.75;
+          document.MacrosCalculator.carbohydrate.value = carbohydrate;
+          document.MacrosCalculator.protein.value = protein;
+          document.MacrosCalculator.fat.value = fat;
+        }
+
+        else if(goal == 3){ //Maintain weight
+          carbohydrate = weight*4;
+          protein = weight*0.9;
+          fat = weight*0.75;
+          document.MacrosCalculator.carbohydrate.value = carbohydrate;
+          document.MacrosCalculator.protein.value = protein;
+          document.MacrosCalculator.fat.value = fat;
+        }
+
+
+      }
+    </script>
+
+  </body>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Ideal Weight Calculator</title> <!--title-->
+  <link rel="stylesheet" href="BMIStyle.css">
+</head>
+
+<!--BMI Calculator-->
+<body>
+  <h1 title = "Ideal Weight Calculator">
+    Ideal Weight Calculator
+  </h1>
+
+  <div class="container">
+    <form name="IdealWeightCalculator">
+      Age: <input type="number" name="Age"><br>
+      Gender: <select name="gender">
+        <option value="1">male</option>
+        <option value="2">female</option>
+      </select><br>
+      Height: <input type="number" name="height" placeholder="cm"><br>
+
+      <input type="button" value="Calculate" onClick="calcIdealWeight()"><br>
+
+      <bmi style="font-size: 40px; padding: 20px; margin-top: 50px;">
+        Your ideal weight is:
+      </bmi>
+      <input type="number" name="IdealWeightRes"style="font-size: 40px;"> kg
+
+    </form>
+  </div>
+
+  <!--Return home-->
+  <li><a href="home.html"> Return Home </a></li>
+
+  <!--Intro Video-->
+  <h2 style="padding:20px;">How Much Should I Weigh? Calculate Your Ideal Body Weight.</h2>
+  <iframe width="1000" height="600" style="padding: 20px;" src="https://www.youtube.com/embed/yoQlfPnW9M0">
+  </iframe>
+
+
+  <!--JavaScript Calculation-->
+  <script>
+    function calcIdealWeight()
+    {
+      var height;
+      var IdealWeightRes;
+      var gender;
+
+      height=Number(document.IdealWeightCalculator.height.value);
+      gender=Number(document.IdealWeightCalculator.gender.value); // male=1; female=2;
+
+
+      if(gender==1){  //male
+        IdealWeightRes=52+1.9*(height-152.4)/2.54;
+        document.IdealWeightCalculator.IdealWeightRes.value=IdealWeightRes;
+      }
+
+      else if(gender==2){
+        IdealWeightRes=49+1.7*(height-152.4)/2.54;
+        document.IdealWeightCalculator.IdealWeightRes.value=IdealWeightRes;
+      }
+
+    }
+  </script>
+
+</body>
+
+</html>

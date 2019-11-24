@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+
+
+
+
+  <head>
+    <title>BMI Calculator</title> <!--title-->
+    <link rel="stylesheet" href="BMIStyle.css">
+  </head>
+
+<!--BMI Calculator-->
+  <body>
+    <h1 title = "BMI">
+      BMI Calculator
+    </h1>
+    <div class="container">
+      <form name="BMICalculator">
+        Age: <input type="number" name="Age"><br>
+        Gender: <br>
+                <input type="radio" name="gender" value="male"> Male <br>
+                <input type="radio" name="gender" value="female"> Female <br>
+        Height: <input type="number" name="height" placeholder="cm"><br>
+        Weight: <input type="number" name="weight" placeholder="kg"><br>
+
+        <input type="button" value="Calculate" onClick="calcBmi()"><br>
+
+        <bmi style="font-size: 40px; padding: 20px; margin-top: 50px;">
+          Your BMI result:
+        </bmi>
+        <input type="number" name="BMIRes"style="font-size: 40px;">
+
+      </form>
+    </div>
+
+
+
+    <!--Return home-->
+    <li><a href="home.html"> Return Home </a></li>
+
+    <!--Intro Video-->
+    <h2 style="padding:20px;">What is BMI?</h2>
+    <iframe width="1000" height="600" style="padding: 20px;" src="https://www.youtube.com/embed/1LWuG1lOXJs">
+    </iframe>
+
+
+    <!--JavaScript Calculation-->
+    <script>
+      function calcBmi()
+      {
+        var height;
+        var weight;
+        var res;
+        height=Number(document.BMICalculator.height.value);
+        weight=Number(document.BMICalculator.weight.value);
+        res=weight/((height/100)*(height/100));
+        document.BMICalculator.BMIRes.value = res;
+      }
+    </script>
+
+  </body>
+
+
+
+
+
+</html>

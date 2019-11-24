@@ -1,0 +1,94 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.box1{
+  height: 100vh;
+  width: 100%;
+  background-image: url(gym2.jpg);
+  background-size: cover;
+  background-position: center;
+  display: table;
+  background-attachment: fixed;
+}
+
+.box2{
+  height: 100vh;
+  width: 100%;
+  background-image: url(parallex2.jpg);
+  background-size: cover;
+  background-position: center;
+  display: table;
+  background-attachment: fixed;
+}
+
+.box3{
+  height: 100vh;
+  width: 100%;
+  background-image: url(parallex3.jpg);
+  background-size: cover;
+  background-position: center;
+  display: table;
+  background-attachment: fixed;
+}
+
+.box4{
+  height: 100vh;
+  width: 100%;
+  background-image: url(parallex4.jpg);
+  background-size: cover;
+  background-position: center;
+  display: table;
+  background-attachment: fixed;
+}
+
+.box5{
+  height: 100vh;
+  width: 100%;
+  background-image: url(parallex5.jpg);
+  background-size: cover;
+  background-position: center;
+  display: table;
+  background-attachment: fixed;
+}
+
+.box6{
+  height: 100vh;
+  width: 100%;
+  background-image: url(parallex6.jpg);
+  background-size: cover;
+  background-position: center;
+  display: table;
+  background-attachment: fixed;
+}
+
+h1{
+  font-family: sans-serif;
+  font-size: 30px;
+  color: #fff;
+  margin: 0px;
+  padding: 40px;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+
+li a{
+  width: 100%;
+  height: 50px;
+  background-color: #3392FF;
+  list-style: none;
+  text-align: center;
+  line-height: 50px;
+  display: block;
+  text-decoration: none;
+  font-size: 30px;
+  color: white;
+  padding: 0 20px;
+}
+
+li a:hover{
+  background-color: #2367B6;
+}
