@@ -74,6 +74,11 @@ h1{
   vertical-align: middle;
 }
 
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
 li a{
   width: 100%;
