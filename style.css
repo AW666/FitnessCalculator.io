@@ -19,6 +19,9 @@ nav{
   width: 100%;
   height: 70px;
   background-color: white;
+  display: flex;
+  justify-content: center; /* Centers items horizontally */
+  align-items: center; /* Centers items vertically */
 }
 
 ul li {
