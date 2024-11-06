@@ -3,6 +3,9 @@ h1{
   font-size: 60px;
   text-align: center;
   background-color: red;
+  width: 100%;
+  padding: 20px 0; /* Adds spacing to the top and bottom */
+  box-sizing: border-box;
 }
 
 /* "*" means I am gonna style everything in this website with this styling*/
@@ -46,5 +49,9 @@ ul li a:hover{
 }
 
 .img-home{
-  width:1520px;
+  width: 100%;
+  max-width: 1520px; /* Ensures image does not exceed this width */
+  height: auto; /* Maintains image aspect ratio */
+  display: block;
+  margin: 0 auto; /* Centers the image */
 }
